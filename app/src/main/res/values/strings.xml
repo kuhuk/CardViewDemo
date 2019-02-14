@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Card View Demo</string>
+    <string name="location_tag1">Sector 2</string>
+    <string name="location_tag2">HSR Layout</string>
+    <string name="includes_food">Includes Food</string>
+    <string name="price_per_bed">8,500/</string>
+    <string name="bed">Bed</string>
+    <string name="price_deposit">Deposit: 12000</string>
+    <string name="image_of_the_place_mentioned">Image of the place mentioned.</string>
+</resources>
