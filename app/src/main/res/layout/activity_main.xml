@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
     <android.support.v7.widget.CardView
@@ -10,8 +11,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:padding="5dp"
-        app:cardElevation="8dp"
-        app:cardCornerRadius="8dp">
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
@@ -25,15 +26,15 @@
                 android:layout_marginTop="0dp"
                 android:layout_marginEnd="0dp"
                 android:layout_marginBottom="0dp"
-                android:src="@drawable/card_image"
+                android:contentDescription="@string/image_of_the_place_mentioned"
                 android:scaleType="centerCrop"
+                android:src="@drawable/card_image"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintDimensionRatio="H,16:9"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0"
-                android:contentDescription="@string/image_of_the_place_mentioned" />
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
                 android:id="@+id/tvLocationTag1"
@@ -43,6 +44,7 @@
                 android:layout_marginTop="160dp"
                 android:layout_marginEnd="8dp"
                 android:text="@string/location_tag1"
+                android:textColor="#000"
                 android:textSize="18sp"
                 android:textStyle="normal"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -54,75 +56,77 @@
                 android:id="@+id/tvLocationTag2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
                 android:layout_marginEnd="8dp"
                 android:text="@string/location_tag2"
                 android:textStyle="normal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.027"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tvLocationTag1"
+                app:layout_constraintHorizontal_bias="0.066"
+                app:layout_constraintStart_toStartOf="@+id/tvLocationTag1"
                 app:layout_constraintTop_toBottomOf="@+id/tvLocationTag1" />
 
             <TextView
                 android:id="@+id/tvIncludesFood"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
                 android:text="@string/includes_food"
                 android:textSize="12sp"
                 android:textStyle="normal"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.028"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tvLocationTag2"
+                app:layout_constraintStart_toStartOf="@+id/tvLocationTag2"
                 app:layout_constraintTop_toBottomOf="@+id/tvLocationTag2"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
                 android:id="@+id/tvPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="160dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginEnd="60dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="8dp"
                 android:text="@string/price_per_bed"
                 android:textSize="25sp"
                 android:textStyle="normal"
-                app:layout_constraintBottom_toTopOf="@+id/tvDeposit"
+                android:textColor="#000"
+                app:layout_constraintBottom_toBottomOf="@+id/tvLocationTag1"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintHorizontal_bias="0.861"
+                app:layout_constraintStart_toEndOf="@+id/tvLocationTag1"
+                app:layout_constraintTop_toTopOf="@+id/tvLocationTag1"
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
                 android:id="@+id/tvBed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
-                android:layout_marginBottom="14dp"
                 android:text="@string/bed"
                 android:textStyle="normal"
-                app:layout_constraintBottom_toTopOf="@+id/tvDeposit"
+                android:textColor="#000"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvPrice"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/tvPrice" />
+                app:layout_constraintStart_toEndOf="@+id/tvPrice"
+                app:layout_constraintTop_toTopOf="@+id/tvPrice"
+                app:layout_constraintVertical_bias="1.0" />
 
             <TextView
                 android:id="@+id/tvDeposit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="36dp"
                 android:layout_marginBottom="8dp"
                 android:lineSpacingExtra="8dp"
                 android:text="@string/price_deposit"
                 android:textSize="14sp"
                 android:textStyle="normal"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tvPrice"
+                app:layout_constraintTop_toBottomOf="@+id/tvPrice"
                 app:layout_constraintVertical_bias="1.0" />
 
             <ImageView
@@ -131,8 +135,9 @@
                 android:layout_height="22dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginBottom="4dp"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/tvIncludesFood"
                 app:layout_constraintStart_toEndOf="@+id/tvIncludesFood"
+                app:layout_constraintTop_toTopOf="@+id/tvIncludesFood"
                 app:srcCompat="@drawable/ic_action_includes" />
 
         </android.support.constraint.ConstraintLayout>
